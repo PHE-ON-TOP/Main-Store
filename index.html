@@ -9,7 +9,7 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(to bottom, #1a1a1a, #000000);
+            background: radial-gradient(circle, #179fc9 -125%, #000000 50%);
             color: #179fc9;
             font-family: Arial, sans-serif;
             font-size: 17px;
@@ -20,6 +20,19 @@
             line-height: 1.6;
             overflow: hidden;
             user-select: none;
+            transition: background 5s ease-in-out;
+        }
+
+        @keyframes backgroundFade {
+            0% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 125%);
+            }
+            50% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 100%);
+            }
+            100% {
+                background: radial-gradient(circle, #179fc9 -125%, #000000 75%);
+            }
         }
 
         .content {
